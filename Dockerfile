@@ -17,7 +17,7 @@ echo "*/5 * * * * /opt/otrs/bin/otrs.Daemon.pl start >> /dev/null" >> /var/spool
 
 ADD supervisord.conf /etc/
 
-EXPOSE 80, 443
+EXPOSE 80 443
 
 LABEL org.opencontainers.image.source="https://github.com/nyanmark/znuny-docker"
 
