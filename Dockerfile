@@ -19,4 +19,6 @@ ADD supervisord.conf /etc/
 
 EXPOSE 80, 443
 
+LABEL org.opencontainers.image.source="https://github.com/nyanmark/znuny-docker"
+
 ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
