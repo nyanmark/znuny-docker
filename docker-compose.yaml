@@ -6,10 +6,12 @@ services:
     restart: always
     container_name: znuny
     ports:
+#      - 443:443
       - 80:80
     volumes:
+#      - ./letsencrypt:/etc/letsencrypt
       - ./config.pm:/opt/otrs/Kernel/Config.pm
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - postgres
 
